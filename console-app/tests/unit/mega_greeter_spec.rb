@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
-describe MegaGreeterTest do
-  it 'say hi to world as default' do
-    greeter = MegaGreeter.new
+RSpec.describe 'Strings' do
+  context 'hello' do
+    it 'returns' do
+      expect('hello').to eq 'hello'
+    end
 
-    expect(greeter.say_hi).to eq 'Hello World!'
+    it 'does not returns' do
+      expect('hello').to eq 'hello2'
+    end
   end
 end

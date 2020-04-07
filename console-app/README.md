@@ -18,4 +18,4 @@
 
 ### Run
 
-- ``
+- `bin/rspec --format doc tests/unit`
