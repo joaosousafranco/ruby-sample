@@ -20,6 +20,10 @@
 
 - `rspec --init`
 
-### Run
+### Run tests
 
 - `bin/rspec --format doc spec/unit`
+
+## Run
+
+- `ruby src/game.rb`
