@@ -12,6 +12,10 @@
 
 ## Tests
 
+### Factory Bot cheatsheet
+
+<https://devhints.io/factory_bot>
+
 ### Init rspec
 
 - `rspec --init`

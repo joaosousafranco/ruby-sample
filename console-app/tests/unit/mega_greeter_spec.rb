@@ -4,7 +4,7 @@ require 'factory_bot'
 
 # User class
 class User
-  def initialize (first_name = nil, last_name = '', admin = false)
+  def initialize(first_name = nil, last_name = '', admin = false)
     @first_name = first_name
     @last_name = last_name
     @admin = admin
@@ -30,9 +30,9 @@ end
 RSpec.describe 'Greeter' do
   context 'Greeting' do
     it 'Greeter is portuguese' do
-      portuguese_greeter = create(:user)
+      portuguese_greeter = build(:user)
 
-      expect(portuguese_greeter.first_name).to eq 'Portugal'
+      expect(portuguese_greeter.first_name).to eq 'John'
     end
   end
 end
