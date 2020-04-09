@@ -22,4 +22,4 @@
 
 ### Run
 
-- `bin/rspec --format doc tests/unit`
+- `bin/rspec --format doc spec/unit`
