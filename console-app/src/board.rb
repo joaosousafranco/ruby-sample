@@ -9,7 +9,7 @@ class Tile
   attr_accessor :player
 end
 
-# Definesthe oard game
+# Define the board game
 class Board
   def initialize
     @tiles = []
