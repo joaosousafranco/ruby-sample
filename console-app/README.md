@@ -8,7 +8,7 @@
 
 ### Install
 
-- `bundle install`
+- `bundle install --binstubs`
 
 ## Tests
 

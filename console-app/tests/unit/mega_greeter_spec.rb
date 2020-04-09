@@ -1,13 +1,38 @@
 # frozen_string_literal: true
 
-RSpec.describe 'Strings' do
-  context 'hello' do
-    it 'returns' do
-      expect('hello').to eq 'hello'
-    end
+require 'factory_bot'
 
-    it 'does not returns' do
-      expect('hello').to eq 'hello2'
+# User class
+class User
+  def initialize (first_name = nil, last_name = '', admin = false)
+    @first_name = first_name
+    @last_name = last_name
+    @admin = admin
+  end
+
+  def full_name
+    @first_name + ' ' + @last_name
+  end
+
+  attr_accessor :first_name
+  attr_accessor :last_name
+  attr_accessor :admin
+end
+
+RSpec.describe 'Greeter' do
+  FactoryBot.define do
+    factory :user do
+      first_name { 'John' }
+      last_name  { 'Doe' }
+      admin { false }
+    end
+  end
+
+  context 'Greeting' do
+    it 'Greeter is portuguese' do
+      portuguese_greeter = create(:user)
+
+      expect(portuguese_greeter.first_name).to eq 'Portugal'
     end
   end
 end
