@@ -34,6 +34,10 @@
 
 <https://sorbet.org/docs/adopting>
 
+### Init sorbet
+
+- `srb init`
+
 ### Check
 
 - `srb tc`
