@@ -1,4 +1,8 @@
+# typed: true
 # frozen_string_literal: true
+
+# (1) Bring T::Sig into scope:
+require 'sorbet-runtime'
 
 # Defines a single tile in the board game
 class Tile
@@ -11,6 +15,9 @@ end
 
 # Define the board game
 class Board
+  # (2) extend T::Sig to get access to `sig` for annotations:
+  extend T::Sig
+
   def initialize
     @tiles = []
 
@@ -24,6 +31,7 @@ class Board
 
   attr_reader :tiles
 
+  sig { params(player: Player, row: Integer, column: Integer).returns(RuboCop::Cop::Lint::Void) }
   def play(player, row, column)
     unless tiles[row][column].player.nil?
       raise 'Position is already in use by another player'

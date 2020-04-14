@@ -27,3 +27,17 @@
 ## Run
 
 - `ruby src/game.rb`
+
+## Type checking
+
+### Sorbet
+
+<https://sorbet.org/docs/adopting>
+
+### Check
+
+- `srb tc`
+
+### Auto correct
+
+- `srb tc -a`
